@@ -1,0 +1,45 @@
+<mat-toolbar color="basic">
+    <span>
+        <div>
+            <mat-icon>account_balance_wallet</mat-icon>
+        </div>
+    </span>
+    <div style="display: flex;">
+        <div>
+            <a mat-button id="dashboard" class="menu-item" routerLink="home" (click)="bolding('#dashboard')">
+                Dashboard
+            </a>
+        </div>
+        
+        <div>
+            <a mat-button id="accounts" class="menu-item" routerLink="accounts" (click)="bolding('#accounts')">
+                Accounts
+            </a>
+        </div>
+        <div>
+            <a mat-button id="records" class="menu-item" routerLink="records" (click)="bolding('#records')">
+                Records
+            </a>
+        </div>
+        
+        <div>
+            <a mat-button id="analytics" class="menu-item" routerLink="analytics" (click)="bolding('#analytics')">
+                Analytics
+            </a>
+        </div>
+        
+
+    </div>
+    <div class="space"></div>
+    <span>{{securityService.obtenerCampoJWT('username')}}</span>
+    <a mat-button (click)="securityService.logout()">Logout</a>
+    <!--app-autorizado>
+        <ng-container autorizado>
+        </ng-container>
+        <ng-container noAutorizado>
+            <a mat-button routerLink="login">Login</a>
+            <a mat-button routerLink="registro">Registro</a>
+        </ng-container>
+    </app-autorizado-->
+    
+</mat-toolbar>

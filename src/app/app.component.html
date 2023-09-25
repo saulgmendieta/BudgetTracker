@@ -1,0 +1,5 @@
+<app-menu [selectedMenu]="'dashboard'" *ngIf="securityService.getIsLogged()"></app-menu>
+
+<div class="contenedor">
+    <router-outlet></router-outlet>
+</div>

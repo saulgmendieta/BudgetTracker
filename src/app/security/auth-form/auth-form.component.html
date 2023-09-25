@@ -1,0 +1,21 @@
+<div id="login-title">{{action}}</div>
+
+<form (submit)="formUserData.emit(form.value)" [formGroup]="form" >
+    <mat-form-field appearance="outline">
+        <mat-label>Usuario</mat-label>
+        <input formControlName="username" matInput/>
+        <mat-error>Usuario requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" formControlName="password" matInput>
+        <mat-error>Contraseña requerida</mat-error>
+    </mat-form-field>
+    <div>
+        <button mat-flat-button id="login-button" color="primary" [disabled]="form.invalid"> 
+            {{action}}
+        </button>
+    </div>
+</form>
+
+<app-show-errors [errors]="errors"></app-show-errors>

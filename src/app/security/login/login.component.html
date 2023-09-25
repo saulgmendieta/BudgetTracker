@@ -1,0 +1,7 @@
+<div id="login-form">
+    <app-auth-form 
+        [action]="'Login'"
+        [errors]="errors"
+        (formUserData)="login($event)">
+    </app-auth-form>
+</div>
