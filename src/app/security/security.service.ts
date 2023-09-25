@@ -17,7 +17,7 @@ export class SecurityService {
   private readonly tokenKey = 'token';
   private readonly expiryKey = 'expiry-token';
 
-  private isLogged = false;
+  private isLogged = true;
 
   getIsLogged(): boolean{
     return this.isLogged;

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HighchartsChartModule  } from 'highcharts-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthFormComponent } from './security/auth-form/auth-form.component';
 import { LoginComponent } from './security/login/login.component';
 import { ShowErrorsComponent } from './utilities/show-errors/show-errors.component';
@@ -36,7 +37,8 @@ import { AnalyticsMainComponent } from './analytics/analytics-main/analytics-mai
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
